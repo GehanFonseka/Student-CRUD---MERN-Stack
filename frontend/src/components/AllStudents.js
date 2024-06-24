@@ -12,7 +12,7 @@ export default function AllStudents() {
                 setStudents(res.data);
             })
             .catch((err) => {
-                alert(`Error Fetching Studentss: ${err.message}`);
+                alert(`Error Fetching Students: ${err.message}`);
             });
     };
 
