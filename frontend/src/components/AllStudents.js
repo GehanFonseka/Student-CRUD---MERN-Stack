@@ -36,44 +36,47 @@ export default function AllStudents() {
     };
 
     return (
-        <div className="container">
-            <h1>All Students</h1>
-            <table className="table">
-                <thead>
-                    <tr>
-                        <th scope="col">#</th>
-                        <th scope="col">Name</th>
-                        <th scope="col">Age</th>
-                        <th scope="col">Gender</th>
-                        <th scope="col">Actions</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    {students.map((student, index) => (
-                        <tr key={student._id}>
-                            <th scope="row">{index + 1}</th>
-                            <td>{student.name}</td>
-                            <td>{student.age}</td>
-                            <td>{student.gender}</td>
-                            <td>
-                                <button
-                                    className="btn btn-outline-primary"
-                                    onClick={() => handleEdit(student._id)}
-                                >
-                                    Edit
-                                </button>
-
-                                <button
-                                    className="btn btn-outline-danger"
-                                    onClick={() => handleDelete(student._id)}
-                                >
-                                    Delete
-                                </button>
-                            </td>
-                        </tr>
-                    ))}
-                </tbody>
-            </table>
+        
+        <div className="container" style={{ fontFamily: 'Arial, sans-serif', padding: '20px', backgroundColor: '#e0f7fa' }}>
+          <h1 style={{ color: '#333', textAlign: 'center', marginTop: '20px' }}>All Students</h1>
+          <table className="table" style={{ width: '100%', borderCollapse: 'collapse', marginTop: '10px', textAlign: 'center' }}>
+            <thead>
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col">Name</th>
+                <th scope="col">Age</th>
+                <th scope="col">Gender</th>
+                <th scope="col">Actions</th>
+              </tr>
+            </thead>
+            <tbody>
+              {students.map((student, index) => (
+                <tr key={student._id}>
+                  <th scope="row">{index + 1}</th>
+                  <td>{student.name}</td>
+                  <td>{student.age}</td>
+                  <td>{student.gender}</td>
+                  <td>
+                    <button
+                      className="btn btn-outline-primary"
+                      style={{ margin: '0 5px' }}
+                      onClick={() => handleEdit(student._id)}
+                    >
+                      Edit
+                    </button>
+      
+                    <button
+                      className="btn btn-outline-danger"
+                      style={{ margin: '0 5px' }}
+                      onClick={() => handleDelete(student._id)}
+                    >
+                      Delete
+                    </button>
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
         </div>
-    );
+      );
 }

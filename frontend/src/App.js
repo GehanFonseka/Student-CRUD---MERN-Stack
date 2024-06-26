@@ -6,6 +6,7 @@ import Header1 from './components/Header1';
 import AddStudent from './components/AddStudent';
 import AllStudents from './components/AllStudents';
 import UpdateStudent from './components/UpdateStudent';
+import Footer from './components/Footer';
 
 
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
@@ -21,6 +22,7 @@ function App() {
 
        
       </Routes>
+      <Footer/>
     </Router>
   );
 }
